@@ -1,3 +1,1 @@
-Hi, Project is created by Prakash
-
-This is test case for webhook.
+Hi, Project is created by Prakash.

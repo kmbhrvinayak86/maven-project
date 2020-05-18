@@ -8,6 +8,7 @@ stages
 
             }
     }
+
    stage('compile source code')
    {   steps {  
            withMaven(jdk: 'localjava', maven: 'localmaven') 
@@ -32,11 +33,11 @@ stages
               archiveArtifacts '**/*.war'	
               }
      }
-       stage('deploy the container')
+       tage('deploy the container')
        { 
            steps
                {
-                 deploy adapters: [tomcat7(credentialsId: 'tomcat7', path: '', url: 'http://54.175.88.96:8080/')], contextPath: '/var/lib/jenkins/workspace/**', war: '**/*.war'
+                 deploy adapters: [tomcat7(credentialsId: 'tomcat7', path: '', url: 'http://54.175.88.96:8080/')], contextPath: null, war: '**/*.war'
                 }
         }
     }

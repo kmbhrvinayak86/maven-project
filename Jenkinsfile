@@ -8,7 +8,6 @@ stages
 
             }
     }
-
    stage('compile source code')
    {   steps {  
            withMaven(jdk: 'localjava', maven: 'localmaven') 
@@ -33,7 +32,7 @@ stages
               archiveArtifacts '**/*.war'	
               }
      }
-       tage('deploy the container')
+       stage('deploy the container')
        { 
            steps
                {

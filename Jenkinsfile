@@ -33,7 +33,7 @@ stages
               archiveArtifacts '**/*.war'	
               }
      }
-       tage('deploy the container')
+       stage('deploy the container')
        { 
            steps
                {

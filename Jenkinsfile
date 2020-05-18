@@ -37,7 +37,7 @@ stages
        { 
            steps
                {
-                 deploy adapters: [tomcat7(credentialsId: 'tomcat7', path: '/var/lib/tomcat/webapps/webapp', url: 'http://54.175.88.96:8080/')], contextPath: null, war: '**/*.war'
+                 deploy adapters: [tomcat7(credentialsId: 'tomcat7', path: '', url: 'http://54.175.88.96:8080/')], contextPath: null, war: '**/*.war'
                 }
         }
     }

@@ -8,16 +8,16 @@
       yum: name=java-1.8.0 state=present
   
     - name: download tomcat tar file from internet
-      get_url: url=http://www-us.apache.org/dist/tomcat/tomcat-8/v8.5.50/bin/apache-tomcat-8.5.50.tar.gz dest=/opt
+      get_url: url=http://www-us.apache.org/dist/tomcat/tomcat-8/v8.5.55/bin/apache-tomcat-8.5.55.tar.gz dest=/opt
 
     - name: unarchieve files
       unarchive:
-        src: /opt/apache-tomcat-8.5.50.tar.gz
+        src: /opt/apache-tomcat-8.5.55.tar.gz
         dest: /opt
         remote_src: yes
 
     - name: change port
-      lineinfile: dest=/opt/apache-tomcat-8.5.50/conf/server.xml regexp='Connector port="8080"' line="<Connector port="8081""
+      lineinfile: dest=/opt/apache-tomcat-8.5.55/conf/server.xml regexp='Connector port="8080"' line="<Connector port="8081""
       
     - name: start tomcat service
-      command: nohup /opt/apache-tomcat-8.5.50/bin/startup.sh
+      command: nohup /opt/apache-tomcat-8.5.55/bin/startup.sh
